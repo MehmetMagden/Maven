@@ -60,7 +60,7 @@ public class C04_Assertions {
             Actual   :https://www.amazon.com/
             <Click to see difference>
 
-            böylece hatanın ne olduğunu araştırmadan JUnit bize raporlamış olur
+            böylece hatanın ne olduğunu araştırmadan JUnit bize raporlamış olur.
          */
 
     }
