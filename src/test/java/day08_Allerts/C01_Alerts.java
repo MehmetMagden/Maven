@@ -3,6 +3,7 @@ package day08_Allerts;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -23,7 +24,26 @@ public class C01_Alerts {
 
     @After
     public void tearDown() {
-        driver.close();
+       // driver.close();
+    }
+
+    @Test
+    public void test01(){
+        /*
+        // Herhangi bir web sitesine gidince veya bir websitesinde herhangi birişlem yaptığımızda ortaya çıkan
+        // uyarılara alert denir
+                Eğer bir alert inspect yapılabiliyorsa o alert otomasyon ile kullanılabilir.
+                bu tür alertlere HTML alert denir ve bunlar için ekstra işlem yapmaya gerek yoktur.
+                tüm webelement'ler gibi locate edip istediğimiz işlemleri yapabiliriz
+                driver.get("https://www.facebook.com"); vb. alertler
+
+                Ancak web uygulamalarında HTML alert yanında java script alert de bulunabilir ve
+                js alert'ler locate edilemez
+
+                Selenium'da JS alertler için çok güzel bir yöntem geliştirilmiştir
+         */
+
+        driver.get("https://www.facebook.com");
     }
 
 
