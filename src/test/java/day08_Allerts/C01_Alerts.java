@@ -2,8 +2,10 @@ package day08_Allerts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -43,7 +45,17 @@ public class C01_Alerts {
                 Selenium'da JS alertler için çok güzel bir yöntem geliştirilmiştir
          */
 
-        driver.get("https://www.facebook.com");
+        driver.get("https://the-internet.herokuapp.com/javascript_alerts");
+        driver.findElement(By.xpath("//*[text()='Click for JS Alert']")).click();
+        driver.switchTo().alert().accept();
+
+        // alert'te okay tuşuna basın ve result kısmında "you succesfully clicked an alert" yazdığını test edelim
+
+        String expectedString ="You successfully clicked an alert";
+        String actualString= driver.findElement(By.xpath("//p[@id='result']")).getText();
+        Assert.assertTrue(actualString.equals(expectedString)); //İkiside yazılabilir
+        Assert.assertEquals(actualString,expectedString);       //İkiside yazılabilir
+
     }
 
 
