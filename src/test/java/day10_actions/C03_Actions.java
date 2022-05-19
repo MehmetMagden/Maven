@@ -44,7 +44,7 @@ public class C03_Actions extends TestBase {
 
 //        7- Acilan sayfada h1 taginda “Elemental Selenium” yazdigini test edelim
         driver.switchTo().window(ikinciSayfaHandleDegeri);
-        WebElement yaziElementi = driver.findElement(By.tagName("hi"));
+        WebElement yaziElementi = driver.findElement(By.tagName("h1"));
 
         String expectedString2 = "Elemental Selenium";
         String actualString2=yaziElementi.getText();
