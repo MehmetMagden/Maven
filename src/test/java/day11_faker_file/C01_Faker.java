@@ -19,9 +19,9 @@ public class C01_Faker extends TestBase {
 
         Faker faker = new Faker();
 
-        actions.click(driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-']"))).sendKeys("Mehmet"+ Keys.TAB+"Magden"+Keys.TAB+0654654+Keys.TAB+Keys.TAB+"asdfsdaf456"+Keys.TAB+19+
+        actions.click(driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-']"))).sendKeys(faker.name().firstName()+ Keys.TAB+faker.name().lastName()+Keys.TAB+faker.phoneNumber()+Keys.TAB+faker.internet().password()+Keys.TAB+Keys.TAB+19+
                 Keys.TAB+Keys.ARROW_DOWN+Keys.TAB+Keys.ARROW_DOWN+Keys.ARROW_DOWN+Keys.ARROW_DOWN+Keys.ARROW_DOWN+Keys.ARROW_DOWN+Keys.ARROW_DOWN+Keys.ARROW_DOWN+
-                Keys.TAB+Keys.SPACE+Keys.SPACE+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.SPACE).perform();
+                Keys.TAB+Keys.TAB+Keys.TAB+Keys.SPACE+Keys.SPACE+Keys.TAB+Keys.TAB+Keys.TAB+Keys.TAB+Keys.SPACE).perform();
 
 
 
