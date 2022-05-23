@@ -71,7 +71,7 @@ public class C02_WebTables extends TestBase {
     }
 
 
-    private void girisYap() {
+    public void girisYap() {
 
         driver.get("https://www.hotelmycamp.com");
         driver.findElement(By.linkText("Log in")).click();
