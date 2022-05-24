@@ -1,6 +1,7 @@
 package day14_excel;
 
 import org.apache.poi.ss.usermodel.*;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileInputStream;
@@ -26,6 +27,12 @@ public class C01_ReadExcel {
         //13. Cell objesi olusturun row.getCell(index)
         Cell cell = row.getCell(3);
         System.out.println(cell);
+
+        String expectedData = "Cezayir";
+        String actualData = cell.getStringCellValue();
+        //String actualData = cell.toString();
+
+        Assert.assertEquals(expectedData,actualData);
 
 
 
