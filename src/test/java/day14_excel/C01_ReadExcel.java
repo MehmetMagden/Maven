@@ -1,9 +1,6 @@
 package day14_excel;
 
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.apache.poi.ss.usermodel.*;
 import org.junit.Test;
 
 import java.io.FileInputStream;
@@ -25,8 +22,10 @@ public class C01_ReadExcel {
         Sheet sheet = workbook.getSheet("Sayfa1");
 
         //12. Row objesi olusturun sheet.getRow(index)
-        Row row = sheet.
+        Row row = sheet.getRow(3);
         //13. Cell objesi olusturun row.getCell(index)
+        Cell cell = row.getCell(3);
+        System.out.println(cell);
 
 
 
