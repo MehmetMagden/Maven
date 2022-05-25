@@ -8,6 +8,10 @@ import utilities.TestBase;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class C02_TumSayfaScreenShot extends TestBase {
 
@@ -18,8 +22,13 @@ public class C02_TumSayfaScreenShot extends TestBase {
         driver.get("https://www.amazon.com");
 
         TakesScreenshot ts = (TakesScreenshot) driver;
-
-        File tumSayfaResim = new File("target/ekranGoruntuleri/tumSayfa.jpeg");
+        LocalDateTime date = LocalDateTime.now();
+        System.out.println(date);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("YYMMDDHHmmss");
+        String tarih =date.format(dtf);
+        System.out.println(tarih);
+       // String tarih = date.toString();
+        File tumSayfaResim = new File("target/ekranGoruntuleri/"+tarih+".jpeg");
         File geciciDosya = ts.getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(geciciDosya,tumSayfaResim);
     }
