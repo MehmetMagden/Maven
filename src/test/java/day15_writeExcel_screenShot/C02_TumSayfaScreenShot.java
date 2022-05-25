@@ -24,7 +24,7 @@ public class C02_TumSayfaScreenShot extends TestBase {
         TakesScreenshot ts = (TakesScreenshot) driver;
         LocalDateTime date = LocalDateTime.now();
         System.out.println(date);
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("YYMMDDHHmmss");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("YYMMddHHmmss");
         String tarih =date.format(dtf);
         System.out.println(tarih);
        // String tarih = date.toString();
